@@ -36,7 +36,7 @@ public class Application {
                     array.input(choice);
                     break;
                 case 2:
-                    array.calculateMeanAndStandardDeviation();
+                    array.calculate();
                     break;
                 case 3:
                     array.sortAscending();
@@ -52,7 +52,7 @@ public class Application {
                 case 6:
                     System.out.print("Введите индекс: ");
                     int index = scanner.nextInt();
-                    array.getElementByIndex(index);
+                    array.elementReplacement(index);
                     break;
 
                 case 7:

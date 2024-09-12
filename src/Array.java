@@ -57,7 +57,7 @@ public class Array {
         System.out.println();
     }
 
-    public void calculateMeanAndStandardDeviation(){
+    public void calculate(){
         int numberOfValues = elements.length;
         if(numberOfValues==0){
             System.out.println("The array is empty");
@@ -118,7 +118,7 @@ public class Array {
         }
     }
 
-    public void getElementByIndex(int index){
+    public void elementReplacement(int index){
         Number newNumber = new Number();
         System.out.print("Введите новое значение: ");
         elements[index] = newNumber.scannerNumber();
