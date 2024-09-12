@@ -65,21 +65,21 @@ public class Array {
         }
         Number sum = new Number();
         for (Number element : elements) {
-            sum = sum.NumberSum(sum,element);
+            sum = sum.numberSum(sum,element);
         }
-        Number result1 = sum.NumberDiv(sum,numberOfValues);
+        Number result1 = sum.numberDiv(sum,numberOfValues);
         System.out.println("The mean deviation is equal to " + result1);
 
         sum = new Number();
         Number difference = new Number();
         Number pow = new Number();
         for (Number element : elements) {
-            difference = difference.NumberDif(element,result1);
-            pow = pow.NumberSquare(difference);
-            sum = sum.NumberSum(sum,pow);
+            difference = difference.numberDif(element,result1);
+            pow = pow.numberSquare(difference);
+            sum = sum.numberSum(sum,pow);
         }
-        Number result2 = sum.NumberDiv(sum,elements.length-1);
-        System.out.println("The standard deviation is equal to "+ result2.NumberSqrt(result2));
+        Number result2 = sum.numberDiv(sum,elements.length-1);
+        System.out.println("The standard deviation is equal to "+ result2.numberSqrt(result2));
     }
 
     public void sortAscending(){

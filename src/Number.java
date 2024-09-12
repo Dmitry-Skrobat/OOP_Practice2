@@ -10,23 +10,23 @@ public class Number extends ComplexNumber {
     public Number() {
     }
 
-    public Number NumberSum(Number value1, Number value2){
+    public Number numberSum(Number value1, Number value2){
         return new Number(value1.getReal() + value2.getReal(), value1.getImaginary() + value2.getImaginary());
     }
 
-    public Number NumberDiv(Number value1,int value2){
+    public Number numberDiv(Number value1,int value2){
         return new Number(value1.getReal()/value2,value1.getImaginary()/value2);
     }
 
-    public Number NumberDif(Number value1,Number value2){
+    public Number numberDif(Number value1,Number value2){
         return new Number(value1.getReal() - value2.getReal(),value1.getImaginary()-value2.getImaginary());
     }
 
-    public Number NumberSquare(Number value1){
+    public Number numberSquare(Number value1){
         return new Number(value1.getReal()*value1.getReal() + value1.getImaginary()*value1.getImaginary(),2*value1.getReal()*value1.getImaginary());
     }
 
-    public Number NumberSqrt(Number value1) {
+    public Number numberSqrt(Number value1) {
         Number result = new Number();
         double module = value1.getModule();
         double fi = value1.getImaginary()/value1.getReal();
