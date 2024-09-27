@@ -32,6 +32,10 @@ public class ComplexNumber {
         return imaginary;
     }
 
+    public double getArgument() {
+        return Math.atan2(imaginary, real);
+    }
+
     @Override
     public String toString() {
         if (imaginary > 0 && real != 0) {

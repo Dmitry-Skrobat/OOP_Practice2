@@ -14,7 +14,7 @@ public class Application {
 
         while (running) {
             System.out.println("\nМеню:");
-            System.out.println("1. Ввести значения массива (Изначальный размер массива 10)");
+            System.out.println("1. Ввести значения массива (Изначальный размер массива 5)");
             System.out.println("2. Рассчитать среднее и СКО");
             System.out.println("3. Отсортировать массив по возрастанию");
             System.out.println("4. Отсортировать массив по убыванию");

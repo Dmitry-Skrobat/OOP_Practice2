@@ -6,26 +6,24 @@ public class Array {
 
 
     public Array() {
-        this.size = 10;
-        this.capacity = 10;
-        this.elements = new Number[size];
-        for(int i = 0; i<10;i++){
-            elements[i] = new Number(Math.round(Math.random()*100),Math.round(Math.random()*100));
-        }
+        this.size = 0;
+        this.capacity = 5;
+        this.elements = new Number[capacity];
     }
 
     public void input(int choice){
         if(choice == 1) {
             for (int i = 0; i < elements.length; i++) {
-                System.out.print("Введите элемент массива: ");
+                System.out.print("Введите элемент массива в виде a + bi,(если какая-то часть комплексного числа отсутствует то введите вместо нее 0): ");
                 Number value = new Number();
                 value = value.scannerNumber();
                 elements[i] = value;
             }
+            size = capacity;
         } else if (choice == 2) {
             for (int i = size; i < capacity; i++) {
                 Number value = new Number();
-                System.out.print("Введите элемент массива: ");
+                System.out.print("Введите элемент массива  виде a + bi,(если какая-то часть комплексного числа отсутствует то введите вместо нее 0): ");
                 value = value.scannerNumber();
                 elements[i] = value;
             }

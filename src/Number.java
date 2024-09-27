@@ -39,8 +39,6 @@ public class Number extends ComplexNumber {
     public Number scannerNumber(){
         Number number = new Number();
         Scanner scanner = new Scanner(System.in);
-        System.out.println();
-        System.out.println("Введите комплексное число в виде a + bi, без пробелов (если какая-то часть комплексного числа отсутствует то введите вместо нее 0)");
         String input = scanner.nextLine();
         input = input.replaceAll(" ","");
         input = input.replace("i","");
@@ -77,8 +75,17 @@ public class Number extends ComplexNumber {
         return number;
 
     }
+
     public int comparisonNumber(Number value1,Number value2){
-        return Double.compare(value1.getModule(), value2.getModule());
+        if(value1.getModule() > value2.getModule()){
+            return 1;
+        }
+        else if (value1.getModule()<value2.getModule()){
+            return -1;
+        }
+        else {
+            return Double.compare(value1.getArgument(),value2.getArgument());
+        }
     }
 
 }
